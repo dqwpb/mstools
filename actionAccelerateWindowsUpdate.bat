@@ -28,6 +28,8 @@ FOR /f %%i IN ('dir /b C:\Users\user\Documents\MustInstalledV2\Windows6.1-KB*.ms
 ECHO The whole work is finished!
 ECHO Completed time: %date% %time%
 
+REM 此步驟做完要先重開機一次！
+
 REM Step 3: 重新執行Windows Update並觀察Step 0.3中資料庫檔案是否持續增大，有就表示檔案正在下載了，否則極有可能為SRV14問題或防火牆問題！
 
 PAUSE
