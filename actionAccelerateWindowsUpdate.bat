@@ -16,7 +16,7 @@ REM Windows6.1-KB3138612-x64.msu
 REM Windows6.1-KB3161664-x64.msu
 REM Windows6.1-KB3172605-x64.msu
 
-REM Step 2: 以下腳本會背景安裝離線更新檔，請先更改兩行路徑！
+REM Step 2: 以下腳本會背景安裝離線更新檔，請先更改兩行路徑並以系統管理員身分執行此bat！
 
 FOR /f %%i IN ('dir /b C:\Users\user\Documents\MustInstalledV2\Windows6.1-KB*.msu') DO (
   NET STOP wuauserv > nul
