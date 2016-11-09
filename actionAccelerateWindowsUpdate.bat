@@ -4,7 +4,7 @@ REM Step 0: 前置作業
 REM Step 0.1: 請先以系統管理員執行命令列：net stop wuauserv
 REM Step 0.2: 把C:\Windows\SoftwareDistribution\DataStore\內的檔案全部清除 -- 這個資料夾會下載更新暫存檔到資料庫檔案(.edb)和快取(.log)
 REM Step 0.3: 把C:\Windows\SoftwareDistribution\Download\內的檔案全部清除 -- 已經安裝的更新(hotfix)的殘留檔，不需留著
-REM Step 0.4: Step 0.3路徑會用在
+REM psStep 0.4: Step 0.3路徑會用在確認更新是否順利進行
 
 REM Step 1: 請先下載以下離線安裝檔，google就有了(並且有繁體中文下載頁面)：
 REM Windows6.1-KB3020369-x64.msu
