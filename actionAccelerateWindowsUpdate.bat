@@ -1,5 +1,11 @@
 @ECHO OFF
 
+REM Step 0: 前置作業
+REM Step 0.1: 請先以系統管理員執行命令列：net stop wuauserv
+REM Step 0.2: 把C:\Windows\SoftwareDistribution\DataStore\內的檔案全部清除 -- 這個資料夾會下載更新暫存檔到資料庫檔案(.edb)和快取(.log)
+REM Step 0.3: 把C:\Windows\SoftwareDistribution\Download\內的檔案全部清除 -- 已經安裝的更新(hotfix)的殘留檔，不需留著
+REM Step 0.4: Step 0.3路徑會用在
+
 REM Step 1: 請先下載以下離線安裝檔，google就有了(並且有繁體中文下載頁面)：
 REM Windows6.1-KB3020369-x64.msu
 REM Windows6.1-KB3050265-x64.msu
@@ -21,5 +27,7 @@ FOR /f %%i IN ('dir /b C:\Users\user\Documents\MustInstalledV2\Windows6.1-KB*.ms
 
 ECHO The whole work is finished!
 ECHO Completed time: %date% %time%
+
+REM Step 3: 重新執行Windows Update並觀察Step 0.3中資料庫檔案是否持續增大，有就表示檔案正在下載了，否則極有可能為SRV14問題或防火牆問題！
 
 PAUSE
